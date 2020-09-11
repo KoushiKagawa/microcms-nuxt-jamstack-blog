@@ -15,7 +15,7 @@ export default {
         const { data } = await axios.get(
             `https://kagawa.microcms.io/api/v1/blog/${params.slug}`,
             {
-                headers: { 'X-API-KEY': '3bbb4eb9-194b-4437-9ce5-dee5347177f7' }
+                headers: { 'X-API-KEY': process.env.API_KEY }
             }
         )
         return data

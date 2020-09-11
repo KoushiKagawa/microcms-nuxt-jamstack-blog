@@ -17,7 +17,7 @@ export default {
       'https://kagawa.microcms.io/api/v1/blog',
       {
         // your-api-key部分は自分のapi-keyに置き換えてください
-        headers: { 'X-API-KEY': '3bbb4eb9-194b-4437-9ce5-dee5347177f7' }
+        headers: { 'X-API-KEY': process.env.API_KEY }
       }
     )
     return data

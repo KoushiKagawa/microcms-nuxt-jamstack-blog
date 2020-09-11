@@ -1,5 +1,9 @@
 import axios from 'axios'
 
+require("dotenv").config();
+const { API_KEY } = process.env;
+const { BASE_URL } = process.env;
+
 export default {
   mode: 'universal',
   /*
@@ -34,6 +38,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/dotenv',
   ],
   /*
   ** Build configuration
@@ -59,5 +64,9 @@ export default {
         )
       return pages
     }
+  },
+  env: {
+    API_KEY,
+    BASE_URL
   }
 }
